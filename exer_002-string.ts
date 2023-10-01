@@ -45,3 +45,18 @@ export function removeExtraSpaces(text: string): string {
 export function convertLink(text: string): string {
   return "";
 }
+
+/**
+ * Concatene os valores de um array em uma única string, separando eles por vírgula, porém entre o penúltimo e o último valor,
+ * troque a vírgula por "e", como na regra de português.
+ * Ex.: 
+ *    [ "banana", "uva", "maçã"] => "banana, uva e maçã"
+ *    [ "1", "2", "3", "4", "5"] => "1, 2, 3, 4 e 5"
+ *    [ "A", "B" ] => "A e B"
+ *    [ "feijão" ] => "feijão"
+ * @param arr 
+ * @returns 
+ */
+export function concatString(arr: string[]): string {
+  return "";
+}
