@@ -27,7 +27,7 @@ export function max(numbers: number[]): number {
 }
 
 /**
- * Checa se o numero passado é par
+ * Checa se o numero é par
  * @param n 
  * @returns boolean
  */
@@ -36,7 +36,7 @@ export function checkEvenNumber(n: number): boolean {
 }
 
 /**
- * Checa se o numero passado é primo
+ * Checa se o numero é primo
  * @param n 
  * @returns boolean
  */
