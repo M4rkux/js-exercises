@@ -5,7 +5,7 @@
  * @returns number
  */
 export function sum(a: number, b: number): number {
-  return 0;
+  return a + b;
 }
 
 /**
@@ -14,7 +14,7 @@ export function sum(a: number, b: number): number {
  * @returns number
  */
 export function min(numbers: number[]): number {
-  return 0;
+  return Math.min(...numbers);
 }
 
 /**
@@ -23,7 +23,7 @@ export function min(numbers: number[]): number {
  * @returns number
  */
 export function max(numbers: number[]): number {
-  return 0;
+  return Math.max(...numbers);
 }
 
 /**
@@ -32,7 +32,7 @@ export function max(numbers: number[]): number {
  * @returns boolean
  */
 export function checkEvenNumber(n: number): boolean {
-  return false;
+  return n % 2 === 0;
 }
 
 /**
@@ -41,5 +41,10 @@ export function checkEvenNumber(n: number): boolean {
  * @returns boolean
  */
 export function checkPrimeNumber(n: number): boolean {
-  return false;
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }

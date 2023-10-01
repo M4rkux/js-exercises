@@ -15,7 +15,21 @@ import { createHmac } from 'node:crypto';
 export function checkPasswordCriteria(password: string): boolean {
   const MIN_LENGTH = 8;
 
-  return false;
+  function hasMinLength(): boolean {
+    return password.length >= MIN_LENGTH;
+  }
+
+  function hasLetter(): boolean {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+    return password.toLowerCase().split("").some(char => alphabet.includes(char));
+  }
+
+  function hasNumber(): boolean {
+    const alphabet = "0123456789".split("");
+    return password.split("").some(char => alphabet.includes(char));
+  }
+
+  return hasMinLength() && hasLetter() && hasNumber();
 }
 
 /**
@@ -29,6 +43,7 @@ export function checkPasswordCriteria(password: string): boolean {
  */
 export function encryptPassword(password: string): string {
   const secret = "abcdef";
-
-  return "";
+  let hash = createHmac('sha512', secret);
+  hash.update(password);
+  return hash.digest("hex");
 }

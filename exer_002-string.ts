@@ -4,7 +4,7 @@
  * @param word 
  */
 export function normalizeString(word: string): string {
-  return "";
+  return word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();
 }
 
 /**
@@ -14,7 +14,7 @@ export function normalizeString(word: string): string {
  * @returns string
  */
 export function reverseString(text: string): string {
-  return "";
+  return text.split("").reverse().join("");
 }
 
 /**
@@ -24,7 +24,7 @@ export function reverseString(text: string): string {
  * @returns string
  */
 export function removeExtraSpaces(text: string): string {
-  return "";
+  return text.replace(/\s+/g, ' ').trim();
 }
 
 
@@ -43,5 +43,8 @@ export function removeExtraSpaces(text: string): string {
  * @returns string
  */
 export function convertLink(text: string): string {
-  return "";
+  if (text.startsWith("http://") || text.startsWith("https://")) {
+    return `<a href="${text}">${text}</a>`;
+  }
+  return text;
 }

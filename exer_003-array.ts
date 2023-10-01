@@ -4,7 +4,7 @@
  * @returns number[]
  */
 export function orderDesc(arr: number[]): number[] {
-  return [];
+  return arr.sort((a: number, b: number) => b - a);
 }
 
 /**
@@ -13,7 +13,7 @@ export function orderDesc(arr: number[]): number[] {
  */
 export function createBooleanArray9x9(): boolean[][] {
   const SIZE = 9;
-  return [];
+  return new Array(SIZE).fill(null).map(() => new Array(SIZE).fill(false));
 }
 
 /**
@@ -22,5 +22,5 @@ export function createBooleanArray9x9(): boolean[][] {
  * @returns boolean
  */
 export function isAllCellsTrue(arr: boolean[][]): boolean {
-  return false;
+  return arr.every(row => row.every(col => col));
 }
