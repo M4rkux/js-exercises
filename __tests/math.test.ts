@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import { checkEvenNumber, checkPrimeNumber, max, min, sum, sumArray } from "../exer_001-math";
+import { checkEvenNumber, checkPrimeNumber, max, min, sum, sumArray } from "../src/exer_001-math";
 
 describe("Teste de funções aritimeticas", () => {
   test("Soma 2 números", () => {

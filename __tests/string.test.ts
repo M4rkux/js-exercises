@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import { concatString, convertLink, normalizeString, removeExtraSpaces, reverseString } from '../exer_002-string';
+import { concatString, convertLink, normalizeString, removeExtraSpaces, reverseString } from '../src/exer_002-string';
 
 describe("Teste de funções com strings", () => {
   test("Testa a conversão de maiúsculas e minúsculas", () => {
