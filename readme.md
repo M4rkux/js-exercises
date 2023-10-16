@@ -12,12 +12,12 @@ npm install
 
 ## Exercícios
 
-Todos os exercícios estão na raíz do projeto, dentro dos arquivos `exer_{numero}-{secao}.ts`.
+Todos os exercícios estão dentro da pasta `src/`, nos arquivos `exer_{numero}-{secao}.ts`.
 
-- `exer_001-math.ts`
-- `exer_002-string.ts`
-- `exer_003-array.ts`
-- `exer_004-security.ts`
+- `src/exer_001-math.ts`
+- `src/exer_002-string.ts`
+- `src/exer_003-array.ts`
+- `src/exer_004-security.ts`
 
 Os exercícios já contam com as assinaturas das funções e as importações necessárias, basta preencher as funções.
 
@@ -31,3 +31,9 @@ npm run test string
 npm run test array
 npm run test security
 ```
+
+## Debug
+Existe um arquivo dentro `.vscode/launch.json` que está com a configuração para os testes unitários.
+Normalmente essa pasta `.vscode` fica no `.gitignore` para não ir para o repisitório, já que as configurações de IDE geralmente são pessoais.
+O atalho para rodar os teste unitários pelo debug é `F5`, também é possível selecionar a configuração desejada, através do atalho `ctrl + shift + D`, isso irá abrir o painel de `Executar e Depurar`.
+Caso deseje adicionar `breakpoints` (ponto de interrupção), o que é o principal objetivo de executar pelo debugger, deve clicar no espaço esquerdo da linha desejada a bolinha vermelha indica que o código irá parar ali e um novo painel irá aparecer no topo da IDE, que permitirá você de ir executando linha por linha a partir do primeiro `breakpoint`.

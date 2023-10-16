@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import { checkPasswordCriteria, encryptPassword } from '../exer_004-security';
+import { checkPasswordCriteria, encryptPassword } from '../src/exer_004-security';
 
 describe("Exercicio de segurança", () => {
   test("Testa os requisitos mínimos de senha", () => {

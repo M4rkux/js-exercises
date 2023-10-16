@@ -27,7 +27,17 @@ export function max(numbers: number[]): number {
 }
 
 /**
- * Checa se o numero passado é par
+ * Retorna a soma de todos os numeros do array
+ * Retorne 0 caso, o array esteja vazio
+ * @param numbers 
+ * @returns number
+ */
+export function sumArray(numbers: number[]): number {
+  return 0;
+}
+
+/**
+ * Checa se o numero é par
  * @param n 
  * @returns boolean
  */
@@ -36,7 +46,7 @@ export function checkEvenNumber(n: number): boolean {
 }
 
 /**
- * Checa se o numero passado é primo
+ * Checa se o numero é primo
  * @param n 
  * @returns boolean
  */

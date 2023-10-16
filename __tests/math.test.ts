@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import { checkEvenNumber, checkPrimeNumber, max, min, sum } from "../exer_001-math";
+import { checkEvenNumber, checkPrimeNumber, max, min, sum, sumArray } from "../src/exer_001-math";
 
 describe("Teste de funções aritimeticas", () => {
   test("Soma 2 números", () => {
@@ -24,7 +24,13 @@ describe("Teste de funções aritimeticas", () => {
     expect(max(arr2)).toBe(9);
   });
 
-  test("Verifica se o numero passado é par", () => {
+  test("Soma os números do array", () => {
+    const arr: number[] = [1, 2, 3, 4, 5];
+    expect(sumArray(arr)).toBe(15);
+    expect(sumArray([])).toBe(0);
+  });
+
+  test("Verifica se o número é par", () => {
     expect(checkEvenNumber(1)).toBe(false);
     expect(checkEvenNumber(2)).toBe(true);
     expect(checkEvenNumber(3)).toBe(false);
@@ -32,7 +38,7 @@ describe("Teste de funções aritimeticas", () => {
     expect(checkEvenNumber(420)).toBe(true);
   });
 
-  test("Verifica se o número passado é primo", () => {
+  test("Verifica se o número é primo", () => {
     expect(checkPrimeNumber(2)).toBe(true);
     expect(checkPrimeNumber(3)).toBe(true);
     expect(checkPrimeNumber(4)).toBe(false);

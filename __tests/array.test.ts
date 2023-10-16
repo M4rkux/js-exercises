@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import { createBooleanArray9x9, isAllCellsTrue, orderDesc } from '../exer_003-array';
+import { createBooleanArray9x9, isAllCellsTrue, orderDesc } from '../src/exer_003-array';
 
 describe("Exercício de arrays", () => {
   test("Ordena um array de forma decrescente", () => {

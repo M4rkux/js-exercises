@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import { convertLink, normalizeString, removeExtraSpaces, reverseString } from '../exer_002-string';
+import { concatString, convertLink, normalizeString, removeExtraSpaces, reverseString } from '../src/exer_002-string';
 
 describe("Teste de funções com strings", () => {
   test("Testa a conversão de maiúsculas e minúsculas", () => {
@@ -23,5 +23,15 @@ describe("Teste de funções com strings", () => {
     expect(convertLink("Texto normal")).toBe("Texto normal");
     expect(convertLink("https://google.com")).toBe("<a href=\"https://google.com\">https://google.com</a>");
     expect(convertLink("http://subrumundo.vercel.com")).toBe("<a href=\"http://subrumundo.vercel.com\">http://subrumundo.vercel.com</a>");
+  });
+
+  test("Testa a concatenação de string", () => {
+    expect(concatString([ "banana", "uva", "maçã"])).toBe("banana, uva e maçã");
+    expect(concatString([ "1", "2", "3", "4", "5"])).toBe("1, 2, 3, 4 e 5");
+    expect(concatString([ "A", "B" ])).toBe("A e B");
+    expect(concatString([ "feijão" ])).toBe("feijão");
+    expect(concatString([ "" ])).toBe("");
+    expect(concatString([ "Pêra", "Uva", "Maçã", "Salada mista"])).toBe("Pêra, Uva, Maçã e Salada mista");
+    expect(concatString([ "paca", "tatu"/*, "cotia não" */ ])).toBe("paca e tatu");
   });
 });
