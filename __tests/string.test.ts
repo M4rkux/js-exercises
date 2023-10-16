@@ -30,6 +30,7 @@ describe("Teste de funções com strings", () => {
     expect(concatString([ "1", "2", "3", "4", "5"])).toBe("1, 2, 3, 4 e 5");
     expect(concatString([ "A", "B" ])).toBe("A e B");
     expect(concatString([ "feijão" ])).toBe("feijão");
+    expect(concatString([ "" ])).toBe("");
     expect(concatString([ "Pêra", "Uva", "Maçã", "Salada mista"])).toBe("Pêra, Uva, Maçã e Salada mista");
     expect(concatString([ "paca", "tatu"/*, "cotia não" */ ])).toBe("paca e tatu");
   });
