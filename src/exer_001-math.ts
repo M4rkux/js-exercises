@@ -33,7 +33,7 @@ export function max(numbers: number[]): number {
  * @returns number
  */
 export function sumArray(numbers: number[]): number {
-  return 0;
+  return numbers.reduce((acc, curr) => acc + curr, 0);
 }
 
 /**
